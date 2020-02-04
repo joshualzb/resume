@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="zh" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>梁照彬-JAVA&WEB简历</title>
+    <link type="text/css" rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css" />
+    <style>
+        body {
+            background: rgb(204, 204, 204);
+        }
+
+        page[size="A4"] {
+            background: white;
+            width: 210mm;
+            height: 296mm;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            color: #333;
+        }
+
+        .header {
+            position: absolute;
+            left: 0;
+            top: 10mm;
+            width: 100%;
+            height: 7.5mm;
+            background-color: rgba(48, 144, 182, 0.9);
+            z-index: 2;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        .header .text {
+            position: absolute;
+            top: -0.5mm;
+            bottom: -0.5mm;
+            display: block;
+            left: 16mm;
+            text-align: center;
+            width: 40mm;
+            background-color: rgb(241, 241, 241);
+            color: #AAAAAA;
+            font-weight: bold;
+            line-height: 8mm;
+            font-size: x-large;
+            border-radius: 0 5mm 0 5mm;
+        }
+
+        .sider {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 73mm;
+            height: 100%;
+            z-index: 1;
+            background-color: rgb(241, 241, 241);
+        }
+
+        .sider .block {
+            width: 53.8mm;
+            margin: 5mm auto;
+            min-height: 50mm;
+            overflow: hidden;
+        }
+
+        .sider .block-1 {
+            margin-top: 22mm;
+            text-align: center;
+        }
+
+        .sider .block-1 .avatar {
+            width: 24mm;
+            height: 24mm;
+            border-radius: 50%;
+            display: inline-block;
+            overflow: hidden;
+            background-color: rgba(48, 144, 182, 0.9);
+            margin-top: 5mm;
+        }
+
+        .sider .block-1 .avatar img {
+            width: 24mm;
+            height: 24mm;
+            border-radius: 50%;
+        }
+
+        .sider .block-1 h1 {
+            margin: 1mm;
+            color: rgba(48, 144, 182, 0.9);
+        }
+
+        .sider .block-1 p {
+            margin: 0;
+            font-size: x-small;
+            color: #999;
+        }
+
+        .sider .block .block-heading {
+            color: rgba(48, 144, 182, 0.9);
+            margin-bottom: 2mm;
+        }
+
+        .sider .block ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .sider .block ul li {
+            display: block;
+            border-bottom: solid 1px #BBBBBB;
+            margin-bottom: 1mm;
+            padding-top: 1mm;
+            padding-bottom: 1mm;
+            white-space: nowrap;
+            font-size: x-small;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sider .block ul li label {
+            display: inline-block;
+            width: 15mm;
+            text-align-last: justify;
+            text-align: justify;
+            text-justify: distribute-all-lines;
+            position: relative;
+            padding-right: 6mm;
+        }
+
+        .sider .block ul li label::after {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            right: 0mm;
+            content: "：";
+        }
+
+        .sider .block ul li span {
+            display: inline-block;
+            width: 32.8mm;
+            color: #666666;
+        }
+
+        .sider .block-3 ul li span {
+            background-color: #bbbbbb;
+            height: 2mm;
+            padding: 0;
+            border-radius: 1mm;
+        }
+
+        .sider .block ul li span em {
+            display: block;
+            background-color: rgba(48, 144, 182, 0.9);
+            height: 2mm;
+            border-radius: 1mm;
+        }
+
+        .content {
+            position: absolute;
+            left: 83mm;
+            top: 25mm;
+            bottom: 20mm;
+            width: 127mm;
+            z-index: 1;
+        }
+
+        .content .block {
+            margin: 8mm 0;
+            min-height: 40mm;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .content .block .block-heading {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 5mm;
+        }
+
+        .content .block .block-heading .icon {
+            width: 8mm;
+            height: 8mm;
+            border-radius: 50%;
+            background-color: rgba(48, 144, 182, 0.9);
+            line-height: 8mm;
+            text-align: center;
+            color: white;
+        }
+
+        .content .block .block-heading .text {
+            width: 26mm;
+            flex-shrink: 0;
+            flex-grow: 0;
+            padding-left: 3mm;
+            font-weight: bold;
+        }
+
+        .content .block .block-heading .line {
+            flex-shrink: 1;
+            flex-grow: 1;
+            height: 1px;
+            background-color: #AAAAAA;
+        }
+
+        .content .block .block-body .row {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 4mm;
+        }
+
+        .content .block .block-body .row .left {
+            width: 28mm;
+            flex-flow: 0;
+            flex-shrink: 0;
+        }
+
+        .content .block .block-body .row .right {
+            width: 90mm;
+            flex-flow: 1;
+            flex-shrink: 1;
+        }
+
+        .content .block .block-body .row .left h2 {
+            padding: 0;
+            margin: 0;
+            color: rgba(48, 144, 182, 0.9);
+            font-size: medium;
+            font-weight: 500;
+            margin: .2mm;
+        }
+
+        .content .block .block-body .row .left p {
+            margin: .2mm;
+            font-size: x-small;
+        }
+
+        .content .block .block-body .row .right h3 {
+            margin: .2mm 0 1mm 0;
+            font-size: small;
+            font-weight: 400;
+        }
+
+        .content .block .block-body .row .right p {
+            margin: .2mm;
+            font-size: small;
+            color: #999;
+        }
+
+        .content .block-3 .block-body {
+            font-size: x-small;
+            color: #666666;
+            padding-right: 7mm;
+        }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2mm;
+            background-color: rgba(48, 144, 182, 0.9);
+            z-index: 2;
+        }
+
+        @media print {
+
+            body,
+            page[size="A4"] {
+                margin: 0;
+                box-shadow: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <page size="A4">
+        <div class="header">
+            <div class="text">个人简历</div>
+        </div>
+        <div class="sider">
+            <div class="block block-1">
+                <div class="avatar">
+                    <img src="./WechatIMG3.jpeg" alt="照片" />
+                </div>
+                <h1>梁照彬</h1>
+                <p>ZHAOBIN LIANG</p>
+            </div>
+            <div class="block block-2">
+                <div class="block-heading">个人信息 <span></span></div>
+                <ul>
+                    <li>
+                        <label>性别</label>
+                        <span>男</span>
+                    </li>
+                    <li>
+                        <label>名族</label>
+                        <span>汉族</span>
+                    </li>
+                    <li>
+                        <label>婚姻状态</label>
+                        <span>未婚</span>
+                    </li>
+                    <li>
+                        <label>联系电话</label>
+                        <span>18698693863（微信）</span>
+                    </li>
+                    <li>
+                        <label>生日</label>
+                        <span>1989/09/04</span>
+                    </li>
+                    <li>
+                        <label>籍贯</label>
+                        <span>内蒙古扎兰屯市中和镇</span>
+                    </li>
+                    <li>
+                        <label>政治面貌</label>
+                        <span>群众</span>
+                    </li>
+                    <li>
+                        <label>工作年限</label>
+                        <span>10年（软件相关）</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="block block-3">
+                <div class="block-heading">技能列表 <span></span></div>
+                <ul id="pointContainer"></ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="block block-1">
+                <div class="block-heading">
+                    <div class="icon"><i class="fa fa-history"></i></div>
+                    <div class="text">工作经验</div>
+                    <div class="line"></div>
+                </div>
+                <div class="block-body">
+                    <div class="row">
+                        <div class="left">
+                            <p>2012-09</p>
+                            <h2>技术负责人</h2>
+                        </div>
+                        <div class="right">
+                            <h3>大连晓晨信息技术有限公司</h3>
+                            <p>技术合伙人，负责公司所有项目的研发和团队管理</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <p>2012-06</p>
+                            <h2>项目组长</h2>
+                        </div>
+                        <div class="right">
+                            <h3>安天信息服务(大连)有限公司</h3>
+                            <p>根据项目经理的需求安排，分配任务，和技术指导</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <p>2010-07</p>
+                            <h2>软件开发</h2>
+                        </div>
+                        <div class="right">
+                            <h3>大连碧丕鸥科技科技有限公司</h3>
+                            <p>.NET技术栈，参与和完善了一套公司的自主开发框架</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block block-2">
+                <div class="block-heading">
+                    <div class="icon"><i class="fa fa-list"></i></div>
+                    <div class="text">最近项目</div>
+                    <div class="line"></div>
+                </div>
+                <div class="block-body">
+                    <div class="row">
+                        <div class="left">
+                            <p>2012/9-至今</p>
+                            <h2>技术负责人</h2>
+                        </div>
+                        <div class="right">
+                            <h3>《编程吖》少儿国学积木编程</h3>
+                            <p>公司自主产品，基于google blockly开发，json数据驱动，自主研发的js引擎。后台使用springboot，网站使用VUE（Nuxt.js)开发。</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <p>2019/11-2019/12</p>
+                            <h2>独立开发</h2>
+                        </div>
+                        <div class="right">
+                            <h3>食在赞（微信小程序）</h3>
+                            <p>事业单位食堂菜品评价微信小程序，使用springboot+vue开发</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <p>2018/6-2019/1</p>
+                            <h2>带队开发</h2>
+                        </div>
+                        <div class="right">
+                            <h3>儿童编程教育</h3>
+                            <p>合作研发项目，涉及技术包括vue,java,mybities,mysql,socket,RocketMQ,OSS,VOD,redis等</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <p>2017/12-2018/5</p>
+                            <h2>带队开发</h2>
+                        </div>
+                        <div class="right">
+                            <h3>动销365（钉钉）</h3>
+                            <p>1.包含进销存，商户库存销量等
+                                2.客户关系管理
+                                3.客户拜访等相关操作
+                                主要使用终端为钉钉端</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <p>2017/6-2017/12</p>
+                            <h2>带队开发</h2>
+                        </div>
+                        <div class="right">
+                            <h3>酷学院（钉钉）</h3>
+                            <p>B2B的学习平台，学习内容已视频，PDF为主，包含练习考核等全方位元素。
+                                技术涉及分库分表，数据库读写分离等为升级分布式做的前期准备。
+                                主要使用终端为钉钉</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block block-3">
+                <div class="block-heading">
+                    <div class="icon"><i class="fa fa-address-card"></i></div>
+                    <div class="text">自我评价</div>
+                    <div class="line"></div>
+                </div>
+                <div class="block-body">
+                    <p>2005年高一辍学来连打工，2008年参加培训（北大青鸟），2010年参加工作</p>
+                    <p>有点小完美主义，希望做事情就要把事情做到最好！</p>
+                    <p>喜欢尝试新的技术，安静的编写代码，一杯茶，一包烟，一个bug写一天</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </page>
+    <script src="./points.js"></script>
+</body>
+
+</html>
